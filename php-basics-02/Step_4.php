@@ -7,8 +7,8 @@ function armstrong($num){
         $sum=$sum+$rem*$rem*$rem;  
         $var=$var/10;
     }  
-    if($num==$sum) return "{$num} Armstrong number"; 
-    else return "{$num}is not an armstrong number";
+    if($num==$sum) return "True"; 
+    else return "False";
 }
 echo armstrong(153), "\n";
 echo armstrong(256), "\n";
