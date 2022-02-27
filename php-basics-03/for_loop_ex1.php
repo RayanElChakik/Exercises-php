@@ -1,0 +1,10 @@
+<?php
+function sumOfDigits($num){
+    $sum = 0;
+    for($i=0; $i< strlen($num); $i++){
+        $sum += $num[$i];
+    }
+    return "$sum \n";
+}
+echo sumOfDigits("9999");
+?>
