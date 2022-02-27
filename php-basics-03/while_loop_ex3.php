@@ -1,13 +1,15 @@
 <?php
 function countLetterPresence($text, $word){
+    $newString = preg_split('/[.|,| ]/', $text);
     $count = 0;
     $x = 0;
-    $newString = explode(" ",$text);
-    while($x <= strlen($text)){
-        if($newString[$x] === $word) $count++;
+    while ($x < sizeof($newString)) {
+        if ($newString[$x] == $word) {
+            $count++;
+        }
         $x++;
     }
-    return "$count \n";
+    echo $count,"\n";
 }
-echo countLetterPresence("The word we are searching for is a word found in this sentence", "word");
+countLetterPresence("The word, we are searching fo,r is a word found in this sentence", "word");
 ?>
